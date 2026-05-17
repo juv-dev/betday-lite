@@ -1,0 +1,13 @@
+name: Frontend / Security Review
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  analyze:
+    uses: juv-dev/workflows-frontend/.github/workflows/security-review.yml@v1.1.0
